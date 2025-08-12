@@ -1,48 +1,24 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
+  "routes": [
     {
-      "source": "/category/uncategorized",
-      "destination": "/",
-      "permanent": true,
-      "statusCode": 301
+      "src": "/category/uncategorized",
+      "status": 301,
+      "headers": { "Location": "/" }
     },
     {
-      "source": "/sample-page/",
-      "destination": "/",
-      "permanent": true,
-      "statusCode": 301
+      "src": "/sample-page/?",
+      "status": 301,
+      "headers": { "Location": "/" }
     },
     {
-      "source": "/sample-page",
-      "destination": "/",
-      "permanent": true,
-      "statusCode": 301
+      "src": "/category/(.*)",
+      "status": 301,
+      "headers": { "Location": "/" }
     },
     {
-      "source": "/category/(.*)",
-      "destination": "/",
-      "permanent": true,
-      "statusCode": 301
-    },
-    {
-      "source": "/wp-(.*)",
-      "destination": "/",
-      "permanent": true,
-      "statusCode": 301
-    },
-    {
-      "source": "/author/(.*)",
-      "destination": "/",
-      "permanent": true,
-      "statusCode": 301
-    },
-    {
-      "source": "/tag/(.*)",
-      "destination": "/",
-      "permanent": true,
-      "statusCode": 301
+      "src": "/wp-(.*)",
+      "status": 301,
+      "headers": { "Location": "/" }
     }
   ]
 }
