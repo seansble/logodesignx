@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /pixel/pixel-favicon-maker/
 
+# 아직 준비 안 된 페이지들
+Disallow: /blog/
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap 위치
 Sitemap: https://logodesignx.com/sitemap.xml
