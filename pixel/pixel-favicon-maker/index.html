@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>파비콘 만들기: 크기·뜻·픽셀 파비콘(16x16/32x32/64x64)·이모지 변환·설정 방법 완벽 가이드</title>
+   <meta name="description" content="파비콘 만들기 전 과정: 파비콘 뜻, 권장 크기(16x16/32x32/64x64), 픽셀 파비콘 제작, 한글·이모지 변환, favicon.ico 설정 방법까지. 무료 온라인 파비콘 생성기로 쉽게 만들어보세요.">
+   <link rel="canonical" href="https://logodesignx.com/pixel/pixel-favicon-maker/">
+   
+   <!-- 파비콘 -->
+   <link rel="icon" href="/favicon.ico" sizes="any">
+   <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+   <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+   <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png" sizes="180x180">
+   <link rel="manifest" href="/site.webmanifest">
+   <meta name="theme-color" content="#111111">
+   
+   <!-- 필수 폰트 3개만 -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="style.css">
+   
+   <!-- 구조화 데이터 -->
+   <script type="application/ld+json">
+   {
+       "@context": "https://schema.org",
+       "@type": "WebApplication",
+       "name": "픽셀 파비콘 메이커",
+       "description": "한글과 이모지에 특화된 픽셀 파비콘 제작 도구. 16x16, 32x32 크기 지원, ICO/PNG/WebP 다운로드",
+       "url": "https://logodesignx.com/pixel/pixel-favicon-maker/",
+       "applicationCategory": "DesignApplication",
+       "operatingSystem": "Any",
+       "offers": {
+           "@type": "Offer",
+           "price": "0",
+           "priceCurrency": "KRW"
+       }
+   }
+   </script>
+   
+   <!-- FAQ 구조화 데이터 -->
+   <script type="application/ld+json">
+   {
+       "@context": "https://schema.org",
+       "@type": "FAQPage",
+       "mainEntity": [
+           {
+               "@type": "Question",
+               "name": "파비콘 크기는 몇 픽셀이 좋나요?",
+               "acceptedAnswer": {
+                   "@type": "Answer",
+                   "text": "브라우저 탭용 16x16, 고해상도 디스플레이용 32x32, 편집 원본용 64x64 픽셀을 권장합니다. 최소 16x16과 32x32 두 가지는 반드시 준비하세요."
+               }
+           },
+           {
+               "@type": "Question",
+               "name": "파비콘 파일 형식은 ICO와 PNG 중 뭐가 좋나요?",
+               "acceptedAnswer": {
+                   "@type": "Answer",
+                   "text": "ICO는 모든 브라우저와 호환되며 여러 크기를 포함할 수 있습니다. PNG는 투명 배경과 더 나은 압축을 지원합니다. 가장 좋은 방법은 favicon.ico를 루트에 두고 PNG 버전도 함께 제공하는 것입니다."
+               }
+           },
+           {
+               "@type": "Question",
+               "name": "한글이나 이모지를 파비콘으로 만들 수 있나요?",
+               "acceptedAnswer": {
+                   "@type": "Answer",
+                   "text": "네, 가능합니다! 이 도구는 한글 텍스트를 픽셀 아트로 변환하거나 이모지를 파비콘 크기로 최적화할 수 있습니다. 16x16에서는 1-2글자, 32x32에서는 2-4글자가 적당합니다."
+               }
+           },
+           {
+               "@type": "Question",
+               "name": "파비콘이 브라우저에 안 보이는 이유는?",
+               "acceptedAnswer": {
+                   "@type": "Answer",
+                   "text": "브라우저 캐시 때문일 가능성이 높습니다. Ctrl+F5로 강제 새로고침하거나 시크릿 모드로 확인하세요. 파일 경로가 정확한지, HTML 링크 태그가 올바른지도 확인이 필요합니다."
+               }
+           }
+       ]
+   }
+   </script>
+   
+   <!-- HowTo 구조화 데이터 -->
+   <script type="application/ld+json">
+   {
+       "@context": "https://schema.org",
+       "@type": "HowTo",
+       "name": "파비콘 만들기 및 웹사이트 설정 방법",
+       "description": "픽셀 파비콘 제작부터 웹사이트 적용까지 단계별 가이드",
+       "step": [
+           {"@type":"HowToStep","name":"파비콘 디자인","text":"16x16 또는 32x32 픽셀 캔버스에서 아이콘 디자인. 심플하고 명확한 형태 권장"},
+           {"@type":"HowToStep","name":"파일 형식 선택","text":"ICO (호환성), PNG (투명도), WebP (최신) 중 선택하여 다운로드"},
+           {"@type":"HowToStep","name":"서버 업로드","text":"favicon.ico는 루트(/)에, PNG는 /icons/ 폴더에 업로드"},
+           {"@type":"HowToStep","name":"HTML 코드 추가","text":"<head> 태그 안에 <link rel='icon' href='/favicon.ico'> 추가"},
+           {"@type":"HowToStep","name":"캐시 확인","text":"브라우저 캐시 삭제 후 새로고침으로 적용 확인"}
+       ]
+   }
+   </script>
+</head>
+<body>
+   <!-- Mobile Header (간소화) -->
+   <header class="mobile-header">
+       <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+       <div class="mobile-logo">
+           <span class="logo-icon-small">P</span>
+           <span>Pixel Favicon</span>
+       </div>
+   </header>
+
+   <!-- Mobile Navigation Overlay (간소화) -->
+   <div class="mobile-nav-overlay" onclick="closeMobileMenu()"></div>
+   <nav class="mobile-nav">
+       <button class="mobile-nav-close" onclick="closeMobileMenu()">✕</button>
+       <div class="mobile-nav-content">
+           <a href="/" class="mobile-nav-link">🏠 LogoDesignX 홈</a>
+           <a href="/pixel/" class="mobile-nav-link">🎨 픽셀 도구 목록</a>
+           <div class="mobile-nav-divider"></div>
+           <button class="mobile-nav-btn" onclick="showGuide(); closeMobileMenu();">📖 사용 가이드</button>
+           <button class="mobile-nav-btn" onclick="showHelp(); closeMobileMenu();">❓ 도움말</button>
+           <button class="mobile-nav-btn" onclick="showExamples(); closeMobileMenu();">🖼️ 갤러리</button>
+           <div class="mobile-nav-divider"></div>
+           <a href="/about" class="mobile-nav-link">📧 문의하기</a>
+       </div>
+   </nav>
+
+   <!-- Desktop Header -->
+   <header class="header desktop-header">
+       <div class="container">
+           <div class="header-content">
+               <a href="/" class="logo" title="LogoDesignX 홈으로">
+                   <span class="logo-icon">P</span>
+                   <span class="logo-text">Pixel Favicon Maker</span>
+               </a>
+               <nav class="nav">
+                   <div class="nav-links">
+                       <a href="/" class="nav-link">🏠 LogoDesignX</a>
+                       <a href="/pixel/" class="nav-link">🎨 픽셀 도구 목록</a>
+                       <span class="nav-divider">|</span>
+                   </div>
+                   <span class="nav-badge">한글 특화</span>
+                   <button class="nav-btn guide-btn" onclick="showGuide()">📖 빠른 가이드</button>
+                   <button class="nav-btn" onclick="showHelp()">도움말</button>
+                   <button class="nav-btn" onclick="showExamples()">갤러리</button>
+               </nav>
+           </div>
+       </div>
+   </header>
+
+   <!-- Main Content -->
+   <main class="main">
+       <div class="container">
+           <!-- Title -->
+           <div class="title-section">
+               <h1 class="title">Pixel Favicon Maker</h1>
+               <p class="subtitle">한글과 이모지에 특화된 픽셀 파비콘 메이커</p>
+           </div>
+
+           <!-- Editor -->
+           <div class="editor-container">
+               <!-- Left Panel - Tools (PC only) -->
+               <div class="tools-panel desktop-only">
+                   <!-- Canvas Size -->
+                   <div class="tool-section">
+                       <h3 class="section-title">캔버스 크기</h3>
+                       <div class="size-selector">
+                           <button class="size-btn active" data-size="16" onclick="changeSize(16)">16×16</button>
+                           <button class="size-btn" data-size="32" onclick="changeSize(32)">32×32</button>
+                       </div>
+                   </div>
+
+                   <!-- Drawing Mode -->
+                   <div class="tool-section">
+                       <h3 class="section-title">그리기 모드</h3>
+                       <div class="drawing-mode">
+                           <div class="mode-option active">
+                               <input type="radio" id="normalMode" name="drawMode" value="normal" checked>
+                               <label for="normalMode">일반 모드</label>
+                           </div>
+                           <div class="mode-option">
+                               <input type="radio" id="mirrorMode" name="drawMode" value="mirror">
+                               <label for="mirrorMode">대칭 모드 (세로)</label>
+                           </div>
+                           <div class="mode-option">
+                               <input type="radio" id="gridMode" name="drawMode" value="grid">
+                               <label for="gridMode">격자 모드 (4분할)</label>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Drawing Tools -->
+                   <div class="tool-section">
+                       <h3 class="section-title">그리기 도구</h3>
+                       <div class="tool-grid">
+                           <button class="tool-btn active" data-tool="pen" title="펜 (P)">✏️</button>
+                           <button class="tool-btn" data-tool="eraser" title="지우개 (E)">🧹</button>
+                           <button class="tool-btn" data-tool="fill" title="채우기 (F)">🪣</button>
+                           <button class="tool-btn" data-tool="eyedropper" title="스포이드 (I)">💉</button>
+                           <button class="tool-btn" data-tool="move" title="이동 (M)">✋</button>
+                       </div>
+                   </div>
+
+                   <!-- Shape Tools -->
+                   <div class="tool-section">
+                       <h3 class="section-title">도형 도구</h3>
+                       <div class="tool-grid">
+                           <button class="tool-btn" data-tool="line" title="직선">━</button>
+                           <button class="tool-btn" data-tool="rect" title="사각형">▢</button>
+                           <button class="tool-btn" data-tool="circle" title="원">○</button>
+                           <button class="tool-btn" data-tool="ellipse" title="타원">⬭</button>
+                           <button class="tool-btn" data-tool="triangle" title="삼각형">△</button>
+                           <button class="tool-btn" data-tool="diamond" title="다이아몬드">◆</button>
+                           <button class="tool-btn" data-tool="star" title="별">★</button>
+                           <button class="tool-btn" data-tool="heart" title="하트">♡</button>
+                       </div>
+                   </div>
+
+                   <!-- Edit Tools -->
+                   <div class="tool-section">
+                       <h3 class="section-title">편집 도구</h3>
+                       <div class="edit-tools">
+                           <button class="edit-btn" onclick="rotateCanvas()">↻ 회전</button>
+                           <button class="edit-btn" onclick="flipHorizontal()">↔️ 좌우반전</button>
+                           <button class="edit-btn" onclick="flipVertical()">↕️ 상하반전</button>
+                           <button class="edit-btn" onclick="swapCanvasColors()">🔄 색상스왑</button>
+                       </div>
+                   </div>
+
+                   <!-- Color Section -->
+                   <div class="tool-section">
+                       <h3 class="section-title">색상</h3>
+                       <div class="color-section">
+                           <!-- Color Mode Selector -->
+                           <div class="color-mode-selector">
+                               <button class="color-mode-btn active" onclick="setColorMode('solid')">단색</button>
+                               <button class="color-mode-btn" onclick="setColorMode('gradient')">그라데이션</button>
+                           </div>
+                           
+                           <!-- Current Colors -->
+                           <div class="current-colors">
+                               <div class="primary-color" id="primaryColor" style="background: #000000"></div>
+                               <div class="secondary-color" id="secondaryColor" style="background: #FFFFFF"></div>
+                               <button class="swap-btn" onclick="swapColors()">⇄</button>
+                           </div>
+                           <input type="color" id="colorPicker" value="#000000" style="display: none;">
+                           
+                           <!-- Preset Colors -->
+                           <div class="preset-colors">
+                               <div class="color-preset" style="background: #000000" data-color="#000000"></div>
+                               <div class="color-preset" style="background: #FFFFFF" data-color="#FFFFFF"></div>
+                               <div class="color-preset" style="background: #FF0000" data-color="#FF0000"></div>
+                               <div class="color-preset" style="background: #00FF00" data-color="#00FF00"></div>
+                               <div class="color-preset" style="background: #0000FF" data-color="#0000FF"></div>
+                               <div class="color-preset" style="background: #FFFF00" data-color="#FFFF00"></div>
+                               <div class="color-preset" style="background: #FF00FF" data-color="#FF00FF"></div>
+                               <div class="color-preset" style="background: #00FFFF" data-color="#00FFFF"></div>
+                           </div>
+                           
+                           <!-- Color Picker Section -->
+                           <div class="color-picker-section">
+                               <!-- Solid Color Controls -->
+                               <div class="solid-color-controls active">
+                                   <div class="slider-container">
+                                       <div class="slider-label">색조</div>
+                                       <input type="range" class="hue-slider" id="hueSlider" min="0" max="360" value="0">
+                                   </div>
+                                   <div class="slider-container">
+                                       <div class="slider-label">밝기</div>
+                                       <input type="range" class="brightness-slider" id="brightnessSlider" min="0" max="100" value="50">
+                                   </div>
+                                   <div class="slider-container">
+                                       <div class="slider-label">채도</div>
+                                       <input type="range" class="saturation-slider" id="saturationSlider" min="0" max="100" value="100">
+                                   </div>
+                               </div>
+                               
+                               <!-- Gradient Controls -->
+                               <div class="gradient-controls">
+                                   <div class="gradient-color-select">
+                                       <button class="gradient-color-btn active" onclick="selectGradientColor(0)">시작 색상</button>
+                                       <button class="gradient-color-btn" onclick="selectGradientColor(1)">끝 색상</button>
+                                   </div>
+                                   <div class="slider-container">
+                                       <div class="slider-label">색조 선택</div>
+                                       <input type="range" class="hue-slider" id="gradientHueSlider" min="0" max="360" value="0">
+                                   </div>
+                                   <div class="gradient-direction">
+                                       <button class="direction-btn active" data-dir="horizontal" onclick="setGradientDirection('horizontal')">→</button>
+                                       <button class="direction-btn" data-dir="vertical" onclick="setGradientDirection('vertical')">↓</button>
+                                       <button class="direction-btn" data-dir="diagonal" onclick="setGradientDirection('diagonal')">↘</button>
+                                       <button class="direction-btn" data-dir="radial" onclick="setGradientDirection('radial')">⭕</button>
+                                   </div>
+                                   <div class="gradient-preview" id="gradientPreview"></div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Actions -->
+                   <div class="tool-section">
+                       <h3 class="section-title">액션</h3>
+                       <button class="action-btn" onclick="clearCanvas()">🗑️ 전체 지우기</button>
+                       <button class="action-btn" onclick="undo()">↶ 실행취소</button>
+                       <button class="action-btn" onclick="redo()">↷ 다시실행</button>
+                   </div>
+               </div>
+
+               <!-- Mobile Tools Panel (simplified) -->
+               <div class="tools-panel mobile-only">
+                   <!-- Actions만 남김 (크기와 색상은 위로 이동) -->
+                   <div class="tool-section">
+                       <h3 class="section-title">빠른 액션</h3>
+                       <div class="mobile-actions">
+                           <button class="action-btn" onclick="clearCanvas()">🗑️ 지우기</button>
+                           <button class="action-btn" onclick="undo()">↶ 취소</button>
+                           <button class="action-btn" onclick="redo()">↷ 다시</button>
+                       </div>
+                   </div>
+               </div>
+
+               <!-- Center - Canvas -->
+               <div class="canvas-container">
+<!-- 심플한 모바일 컨트롤 -->
+<div class="mobile-controls mobile-only">
+    <div class="control-group">
+        <label>크기</label>
+        <div class="size-buttons">
+            <button class="size-btn-mobile active" onclick="changeSize(16)">16×16</button>
+            <button class="size-btn-mobile" onclick="changeSize(32)">32×32</button>
+        </div>
+    </div>
+    <div class="control-group">
+        <label>색상</label>
+        <button class="color-preview-btn" id="mobileColorPreview" style="background: #000000;" onclick="toggleMobileHue()"></button>
+    </div>
+</div>
+
+<!-- 색상 버튼 아래 Hue 슬라이더 추가 -->
+<div class="mobile-hue-panel mobile-only" id="mobileHuePanel" style="display: none;">
+    <input type="range" class="mobile-hue-slider" id="mobileHueSlider" min="0" max="360" value="0" oninput="updateMobileColor(this.value)">
+</div>
+                   
+                   <!-- Main Canvas -->
+                   <div class="canvas-wrapper">
+                       <button class="quick-clear-btn desktop-only" onclick="clearCanvas()" title="빠른 지우기">✕</button>
+                       <canvas id="pixelCanvas"></canvas>
+                       <canvas id="gridCanvas"></canvas>
+                       <canvas id="guideCanvas"></canvas>
+                   </div>
+
+                   <!-- Preview -->
+                   <div class="preview-section">
+                       <h3 class="preview-title">미리보기</h3>
+                       <div class="preview-grid">
+                           <div class="preview-item">
+                               <div class="preview-box" style="background: #f0f0f0;">
+                                   <canvas id="preview16" width="16" height="16"></canvas>
+                               </div>
+                               <span>16×16</span>
+                           </div>
+                           <div class="preview-item">
+                               <div class="preview-box" style="background: #f0f0f0;">
+                                   <canvas id="preview32" width="32" height="32"></canvas>
+                               </div>
+                               <span>32×32</span>
+                           </div>
+                           <div class="preview-item">
+                               <div class="preview-box browser-tab">
+                                   <canvas id="previewTab" width="16" height="16"></canvas>
+                                   <span>Your Site</span>
+                               </div>
+                               <span>브라우저 탭</span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+               <!-- Right Panel -->
+               <div class="export-panel">
+                   <!-- Text Section -->
+                   <div class="text-section">
+                       <h3 class="section-title">
+                           텍스트 → 파비콘
+                           <button class="reset-btn" onclick="resetTextAndCanvas()" title="초기화">🔄</button>
+                       </h3>
+                       <input type="text" id="textInput" placeholder="한글/영문 입력">
+                       <div class="text-hint">💡 16×16: 1-2자 권장 | 32×32: 2-4자 권장</div>
+                       
+                       <div class="text-options">
+                           <select id="fontSelect" onchange="updateFont()">
+                               <option value="Inter">기본 폰트</option>
+                               <option value="NeoDunggeunmo">픽셀 한글</option>
+                               <option value="Press Start 2P">픽셀 영문</option>
+                               <option value="-apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif">시스템 폰트</option>
+                           </select>
+                           
+                           <select id="textMode">
+                               <option value="full">전체 글자</option>
+                               <option value="first">첫 글자만</option>
+                               <option value="chosung">초성만 (한글)</option>
+                           </select>
+                       </div>
+                       
+                       <button class="convert-btn" onclick="textToFavicon()">텍스트 → 파비콘</button>
+                   </div>
+
+                   <!-- Emoji Section -->
+                   <div class="emoji-section">
+                       <h3 class="section-title">
+                           이모지 → 파비콘
+                           <button class="reset-btn" onclick="resetEmojiAndCanvas()" title="초기화">🔄</button>
+                       </h3>
+                       
+                       <!-- Category Dropdown -->
+                       <select id="emojiCategory" onchange="loadEmojiCategory(this.value)">
+                           <option value="popular">⭐ 인기</option>
+                           <option value="face">😀 표정</option>
+                           <option value="hand">👍 제스처</option>
+                           <option value="heart">❤️ 하트</option>
+                           <option value="animal">🐶 동물</option>
+                           <option value="food">🍕 음식</option>
+                           <option value="nature">🌸 자연</option>
+                           <option value="object">💻 사물</option>
+                           <option value="symbol">⚡ 기호</option>
+                       </select>
+                       
+                       <!-- Emoji Grid -->
+                       <div class="emoji-grid-improved" id="emojiGrid"></div>
+                       
+                       <!-- Pagination -->
+                       <div class="emoji-pagination">
+                           <button onclick="prevEmojiPage()">◀</button>
+                           <span id="emojiPageInfo">1 / 3</span>
+                           <button onclick="nextEmojiPage()">▶</button>
+                       </div>
+                       
+                       <!-- Direct Input -->
+                       <div class="emoji-direct-section">
+                           <div class="emoji-direct-label">이모지 직접 입력</div>
+                           <div class="emoji-input-wrapper">
+                               <input type="text" id="emojiDirectInput" placeholder="여기에 이모지 붙여넣기" maxlength="2">
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Export Options -->
+                   <div class="export-section">
+                       <h3 class="section-title">내보내기</h3>
+                       
+                       <button class="export-btn primary" onclick="downloadICO()">
+                           💾 ICO 다운로드
+                       </button>
+                       
+                       <button class="export-btn" onclick="downloadPNG()">
+                           🖼️ PNG 다운로드
+                       </button>
+                       
+                       <button class="export-btn" onclick="downloadWebP()">
+                           🌐 WebP 다운로드
+                       </button>
+
+                       <button class="export-btn" onclick="downloadAll()">
+                           📦 전체 패키지 (ZIP)
+                       </button>
+                   </div>
+
+                   <!-- Code -->
+                   <div class="code-section">
+                       <h3 class="section-title">HTML 코드</h3>
+                       <div class="code-box">
+                           <code id="htmlCode">&lt;link rel="icon" href="/favicon.ico"&gt;</code>
+                       </div>
+                       <button class="copy-btn" onclick="copyCode()">복사</button>
+                   </div>
+               </div>
+           </div>
+
+           <!-- SEO Content Section (Accordion) -->
+           <section class="seo-content">
+               <h2>파비콘 완벽 가이드</h2>
+               
+               <!-- 파비콘이란? -->
+               <details class="seo-accordion">
+                   <summary>
+                       <h3>파비콘이란? 파비콘 뜻과 중요성</h3>
+                   </summary>
+                   <div class="accordion-content">
+                       <p>파비콘(favicon)은 'favorite icon'의 줄임말로, 웹사이트를 대표하는 작은 아이콘입니다. 브라우저 탭, 북마크 목록, 검색 결과 등에서 표시되어 사이트를 쉽게 식별할 수 있게 해줍니다.</p>
+                       
+                       <h4>파비콘이 중요한 이유</h4>
+                       <ul>
+                           <li><strong>브랜드 인지도 향상:</strong> 일관된 시각적 아이덴티티 구축</li>
+                           <li><strong>사용자 경험 개선:</strong> 여러 탭 중에서 쉽게 찾기</li>
+                           <li><strong>전문성 제고:</strong> 완성도 높은 웹사이트 인상</li>
+                           <li><strong>SEO 간접 효과:</strong> 클릭률(CTR) 향상으로 순위 개선</li>
+                       </ul>
+                   </div>
+               </details>
+
+               <!-- 파비콘 크기 가이드 -->
+               <details class="seo-accordion">
+                   <summary>
+                       <h3>파비콘 크기별 용도와 권장 사양</h3>
+                   </summary>
+                   <div class="accordion-content">
+                       <table class="size-guide-table">
+                           <thead>
+                               <tr>
+                                   <th>크기</th>
+                                   <th>용도</th>
+                                   <th>파일 형식</th>
+                                   <th>사용처</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td><strong>16×16</strong></td>
+                                   <td>브라우저 탭 기본</td>
+                                   <td>ICO, PNG</td>
+                                   <td>모든 브라우저</td>
+                               </tr>
+                               <tr>
+                                   <td><strong>32×32</strong></td>
+                                   <td>고해상도 디스플레이</td>
+                                   <td>ICO, PNG</td>
+                                   <td>레티나 디스플레이</td>
+                               </tr>
+                               <tr>
+                                   <td><strong>48×48</strong></td>
+                                   <td>Windows 작업표시줄</td>
+                                   <td>ICO</td>
+                                   <td>Windows OS</td>
+                               </tr>
+                               <tr>
+                                   <td><strong>64×64</strong></td>
+                                   <td>편집용 원본</td>
+                                   <td>PNG</td>
+                                   <td>디자인 작업</td>
+                               </tr>
+                               <tr>
+                                   <td><strong>180×180</strong></td>
+                                   <td>Apple Touch Icon</td>
+                                   <td>PNG</td>
+                                   <td>iOS 홈화면</td>
+                               </tr>
+                               <tr>
+                                   <td><strong>192×192</strong></td>
+                                   <td>Android Chrome</td>
+                                   <td>PNG</td>
+                                   <td>Android 홈화면</td>
+                               </tr>
+                               <tr>
+                                   <td><strong>512×512</strong></td>
+                                   <td>PWA 아이콘</td>
+                                   <td>PNG</td>
+                                   <td>Progressive Web App</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                       
+                       <div class="tip-box">
+                           <strong>💡 Pro Tip:</strong> 최소한 16×16, 32×32, 180×180 세 가지는 반드시 준비하세요. ICO 파일에는 여러 크기를 포함시킬 수 있습니다.
+                       </div>
+                   </div>
+               </details>
+           </section>
+       </div>
+   </main>
+
+   <!-- Footer -->
+   <footer class="footer">
+       <div class="container">
+           <div class="footer-content">
+               <p>&copy; 2024 Pixel Favicon Maker - 한글과 이모지에 특화된 픽셀 파비콘 메이커</p>
+               <div class="footer-links">
+                   <a href="/">LogoDesignX 홈</a>
+                   <span>•</span>
+                   <a href="/pixel/">픽셀 도구 목록</a>
+                   <span>•</span>
+                   <a href="/about">소개</a>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+   <!-- Modals -->
+   <div class="modal" id="helpModal">
+       <div class="modal-content">
+           <span class="modal-close" onclick="closeModal('helpModal')">&times;</span>
+           <h2>도움말</h2>
+           <div class="help-content">
+               <h3>🎨 그리기 모드</h3>
+               <ul>
+                   <li><strong>일반 모드:</strong> 일반적인 그리기</li>
+                   <li><strong>대칭 모드:</strong> 세로 중앙선 기준 좌우 대칭</li>
+                   <li><strong>격자 모드:</strong> 4분할 동시 그리기</li>
+               </ul>
+               
+               <h3>⌨️ 단축키</h3>
+               <ul>
+                   <li><strong>Ctrl+Z:</strong> 실행취소</li>
+                   <li><strong>Ctrl+Y:</strong> 다시실행</li>
+                   <li><strong>P:</strong> 펜</li>
+                   <li><strong>E:</strong> 지우개</li>
+                   <li><strong>F:</strong> 채우기</li>
+                   <li><strong>I:</strong> 스포이드</li>
+                   <li><strong>M:</strong> 이동</li>
+               </ul>
+           </div>
+       </div>
+   </div>
+
+   <div class="modal" id="guideModal">
+       <div class="modal-content guide-modal-simple">
+           <span class="modal-close" onclick="closeModal('guideModal')">&times;</span>
+           <h2>빠른 가이드</h2>
+           
+           <div class="quick-guide-content">
+               <div class="guide-step">
+                   <span class="step-number">1</span>
+                   <div class="step-content">
+                       <h4>캔버스 크기 선택</h4>
+                       <p>16×16 (기본) 또는 32×32 (상세)</p>
+                   </div>
+               </div>
+               
+               <div class="guide-step">
+                   <span class="step-number">2</span>
+                   <div class="step-content">
+                       <h4>디자인 제작</h4>
+                       <p>도구를 사용해 픽셀 아트 그리기</p>
+                   </div>
+               </div>
+               
+               <div class="guide-step">
+                   <span class="step-number">3</span>
+                   <div class="step-content">
+                       <h4>파일 다운로드</h4>
+                       <p>ICO, PNG, WebP 중 선택</p>
+                   </div>
+               </div>
+               
+               <div class="guide-step">
+                   <span class="step-number">4</span>
+                   <div class="step-content">
+                       <h4>웹사이트 적용</h4>
+                       <p>HTML 코드 복사하여 삽입</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
