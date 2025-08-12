@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.logodesignx.com"
+        }
+      ],
+      "destination": "https://logodesignx.com/$1",
+      "permanent": true
+    }
+  ],
   "routes": [
     {
       "src": "/category/uncategorized",
