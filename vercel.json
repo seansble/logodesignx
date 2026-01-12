@@ -3,35 +3,30 @@
     {
       "source": "/(.*)",
       "has": [
-        {
-          "type": "host",
-          "value": "www.logodesignx.com"
-        }
+        { "type": "host", "value": "www.logodesignx.com" }
       ],
       "destination": "https://logodesignx.com/$1",
       "permanent": true
-    }
-  ],
-  "routes": [
-    {
-      "src": "/category/uncategorized",
-      "status": 301,
-      "headers": { "Location": "/" }
     },
     {
-      "src": "/sample-page/?",
-      "status": 301,
-      "headers": { "Location": "/" }
+      "source": "/category/uncategorized",
+      "destination": "/",
+      "permanent": true
     },
     {
-      "src": "/category/(.*)",
-      "status": 301,
-      "headers": { "Location": "/" }
+      "source": "/sample-page",
+      "destination": "/",
+      "permanent": true
     },
     {
-      "src": "/wp-(.*)",
-      "status": 301,
-      "headers": { "Location": "/" }
+      "source": "/category/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-(.*)",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
