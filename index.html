@@ -378,6 +378,9 @@
             margin-bottom: 16px;
             text-align: center;
             background: #f8f9fa;
+            /* div로 변경되면서 추가된 스타일 */
+            display: block;
+            color: #2c2c2c;
         }
 
         .input-tags {
@@ -848,7 +851,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navigation" id="navigation">
         <div class="nav-container">
             <div class="nav-left">
@@ -877,11 +879,7 @@
                         </span>
                         <div class="dropdown-menu" id="pixelDropdown">
                             <a href="/pixel/pixel-favicon-maker/">픽셀 파비콘 메이커</a>
-                            <!-- 나중에 추가할 픽셀 도구들 -->
-                            <!-- <a href="/pixel/pixel-art-maker/">픽셀 아트 메이커</a> -->
-                            <!-- <a href="/pixel/pixel-logo-maker/">픽셀 로고 메이커</a> -->
-                            <!-- <a href="/pixel/pixel-animation/">픽셀 애니메이션</a> -->
-                        </div>
+                            </div>
                     </li>
                     <li class="nav-item">
                         <a href="#pricing" class="nav-link">가격</a>
@@ -890,13 +888,12 @@
             </div>
             
             <div class="nav-right">
-                <a href="#" class="nav-button" onclick="alert('준비 중입니다! 🚧')">로그인</a>
+                <span class="nav-button" style="cursor: default; background: #f5f5f5; color: #999; border: none;">서비스 준비중</span>
                 <a href="/pixel/pixel-favicon-maker/" class="nav-button primary">무료 시작</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -935,7 +932,7 @@
                         
                         <div class="ai-main">
                             <div class="input-section">
-                                <input type="text" class="brand-input" value="TechFlow" readonly>
+                                <div class="brand-input">TechFlow</div>
                                 <div class="input-tags">
                                     <span class="tag active">테크</span>
                                     <span class="tag active">혁신</span>
@@ -1001,7 +998,6 @@
         </div>
     </section>
 
-    <!-- Products Section -->
     <section class="products" id="products">
         <div class="section-container">
             <div class="section-header">
@@ -1037,7 +1033,6 @@
         </div>
     </section>
 
-    <!-- Success Story Section (Starshine 백링크 포함!) -->
     <section class="success-story">
         <div class="story-content">
             <div class="story-badge">PARTNERSHIP</div>
@@ -1139,7 +1134,6 @@
         </div>
     </section>
 
-    <!-- Partner CTA -->
     <section style="padding: 48px 0; background: #f0f8ff; text-align: center;">
         <div class="section-container">
             <h3 style="font-size: 28px; font-weight: 300; margin-bottom: 16px;">
@@ -1155,7 +1149,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing" id="pricing" style="padding: 64px 0; background: #f5f5f5;">
         <div class="section-container">
             <div class="section-header">
@@ -1172,7 +1165,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer style="background: #2c2c2c; color: white; padding: 48px 0; text-align: center;">
         <div class="section-container">
             <p style="opacity: 0.7; font-size: 14px;">© 2024 LogoDesignX. All rights reserved.</p>
@@ -1291,5 +1283,6 @@
             });
         });
     </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"832e76acb4da4594bf46b94c0e328121","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
